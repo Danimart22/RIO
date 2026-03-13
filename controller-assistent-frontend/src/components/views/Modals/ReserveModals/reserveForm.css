@@ -1,0 +1,18 @@
+/* Ocultar sábados y domingos en el DatePicker */
+.ant-picker-cell:nth-child(6),
+.ant-picker-cell:nth-child(7) {
+  display: none !important;
+}
+
+/* Ocultar los encabezados de Sábado (Sa) y Domingo (Su) */
+.ant-picker-content thead tr th:nth-child(6),
+.ant-picker-content thead tr th:nth-child(7) {
+  display: none !important;
+}
+
+/* Ajustar el ancho de las columnas restantes para que ocupen todo el espacio */
+.ant-picker-content thead tr,
+.ant-picker-content tbody tr {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}

@@ -1,0 +1,37 @@
+.reemplazo-skeleton-container {
+  width: 100%;
+}
+
+.reemplazo-skeleton-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.reemplazo-title {
+  font-weight: bold;
+}
+
+.reemplazo-btn-add {
+  margin: 1%;
+  background-color: #F45000;
+  color: white;
+}
+
+.reemplazo-btn-export {
+  margin: 1%;
+}
+
+.reemplazo-btn-assign {
+  margin: 1%;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+.reemplazo-datagrid-container {
+  height: 450px;
+  width: 100%;
+}
+
+.reemplazo-chip {
+  margin: 2px;
+}

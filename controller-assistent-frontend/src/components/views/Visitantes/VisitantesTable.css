@@ -1,0 +1,35 @@
+.visitantes-skeleton-container {
+  width: 100%;
+}
+
+.visitantes-skeleton-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.visitantes-toolbar {
+  display: block;
+}
+
+.visitantes-btn-reserve {
+  margin: 1%;
+  background-color: #05C3DD;
+  color: white;
+}
+
+.visitantes-btn {
+  margin: 1%;
+}
+
+.visitantes-datagrid-container {
+  height: 450px;
+  width: 100%;
+}
+
+.visitantes-btn-edit {
+  margin-right: 10px;
+}
+
+.visitantes-chip {
+  margin: 2px;
+}

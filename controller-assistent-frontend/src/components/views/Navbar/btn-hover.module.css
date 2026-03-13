@@ -1,0 +1,27 @@
+.btnHover {
+  width: 50vh;
+  height: 7vh;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-bg, white); /* Valor por defecto */
+  color: var(--btn-color, "#0A0909"); /* Valor por defecto */
+}
+
+.btnHover:hover {
+  background-color: #f45000 !important; /* !important para forzar */
+  color: white !important; /* Cambiar color de texto en hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btnHover:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

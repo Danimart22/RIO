@@ -1,0 +1,25 @@
+.forget-pass-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.forget-pass-box {
+  width: 70%;
+  max-width: 70%;
+  max-height: 60%;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.forget-pass-button-top {
+  margin-top: 2%;
+}
+
+.forget-pass-step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

@@ -1,0 +1,87 @@
+.switch-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.switch1 {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch1 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider1 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider1:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+input:checked + .slider1 {
+  background-color: #F45000;
+  border: 1px solid #F45000;
+}
+
+input:checked + .slider1:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+.reservas-skeleton-container {
+  width: 100%;
+}
+
+.reservas-skeleton-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.reservas-content {
+  height: 450px;
+  width: 100%;
+  margin: 1%;
+}
+
+.reservas-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservas-datagrid-wrapper {
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.reservas-btn-modify {
+  margin: 5% 5%;
+}
+
+.reservas-btn-delete {
+  margin: 5% 0;
+}

@@ -1,0 +1,49 @@
+.brigadista-skeleton-container {
+  width: 100%;
+}
+
+.brigadista-skeleton-buttons {
+  display: flex;
+  gap: 55%;
+}
+
+.brigadista-skeleton-btn-left {
+  margin-left: 2%;
+}
+
+.brigadista-table-wrapper {
+  z-index: 1;
+  margin: 2%;
+}
+
+.brigadista-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+
+.brigadista-datepicker {
+  width: 300px;
+  margin: 2%;
+}
+
+.brigadista-export-button {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.brigadista-datagrid {
+  height: 450px;
+  width: 100%;
+}
+
+.brigadista-cell-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.time-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

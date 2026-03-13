@@ -1,0 +1,14 @@
+.health-container {
+  padding: 20px;
+  font-family: monospace;
+  background-color: #1e1e1e;
+  color: #00ff00;
+  min-height: 100vh;
+}
+
+.health-pre {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #00ff00;
+}

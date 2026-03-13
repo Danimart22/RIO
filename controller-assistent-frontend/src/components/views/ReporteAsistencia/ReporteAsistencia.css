@@ -1,0 +1,36 @@
+.reporte-asistencia-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.reporte-asistencia-date {
+  min-width: 260px;
+}
+
+.reporte-asistencia-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.reporte-asistencia-actions .MuiButton-root {
+  min-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .reporte-asistencia-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reporte-asistencia-actions {
+    justify-content: center;
+  }
+
+  .reporte-asistencia-date {
+    align-self: center;
+  }
+}

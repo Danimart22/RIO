@@ -1,0 +1,49 @@
+.porteria-skeleton-container {
+  width: 100%;
+}
+
+.porteria-skeleton-buttons {
+  display: flex;
+  gap: 55%;
+}
+
+.porteria-skeleton-btn {
+  margin-left: 2%;
+}
+
+.porteria-table-wrapper {
+  z-index: 1;
+  margin: 2%;
+}
+
+.porteria-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+
+.porteria-datepicker {
+  width: 300px;
+  margin: 2%;
+}
+
+.porteria-export-button {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.porteria-datagrid {
+  height: 450px;
+  width: 100%;
+}
+
+.porteria-cell-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.time-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

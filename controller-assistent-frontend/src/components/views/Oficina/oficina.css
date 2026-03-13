@@ -1,0 +1,78 @@
+ul {
+  list-style-type: none;
+}
+
+.oficina-skeleton-container {
+  width: 100%;
+}
+
+.oficina-skeleton-buttons {
+  display: flex;
+  gap: 55%;
+}
+
+.oficina-skeleton-btn {
+  margin-left: 2%;
+}
+
+.oficina-table-wrapper {
+  z-index: 1;
+  margin: 2%;
+}
+
+.oficina-toolbar {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  margin-bottom: 1%;
+}
+
+.oficina-toolbar-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.oficina-datepicker {
+  width: 300px;
+  height: 40px;
+}
+
+.oficina-toolbar-right {
+  width: 42%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.oficina-toolbar-right--end {
+  justify-content: flex-end;
+}
+
+.oficina-toolbar-right--between {
+  justify-content: space-between;
+}
+
+.oficina-btn-import {
+  background-color: #05C3DD;
+  color: white;
+}
+
+.oficina-btn-seats {
+  background-color: #F45000;
+  color: white;
+}
+
+.oficina-datagrid {
+  height: 450px;
+  width: 100%;
+}
+
+.oficina-cell-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.time-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

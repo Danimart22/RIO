@@ -1,0 +1,42 @@
+.visitantes-skeleton-container {
+  margin-top: 20px;
+}
+
+.visitantes-skeleton-buttons {
+  display: flex;
+  gap: 55%;
+}
+
+.visitantes-skeleton-btn {
+  margin-left: 2%;
+}
+
+.visitantes-table-wrapper {
+  z-index: 1;
+  margin: 2%;
+}
+
+.visitantes-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+
+.visitantes-datepicker {
+  width: 300px;
+  margin: 2%;
+}
+
+.visitantes-datagrid {
+  height: 450px;
+  width: 100%;
+}
+
+.visitantes-cell-scroll {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.visitantes-chip {
+  margin: 2px;
+}

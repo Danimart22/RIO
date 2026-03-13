@@ -1,0 +1,80 @@
+.modalUserRh{
+    margin: 20px; /* Ajusta el valor según el margen deseado */
+    width: calc(100% - 40px); /* Resta el doble del margen para mantener el ancho correcto */
+    max-width: 100%;
+    height: calc(100% - 40px); /* Resta el doble del margen para mantener la altura correcta */
+    max-height: 100%;
+}
+
+.form-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .availability-low {
+    background-color: yellow;
+  }
+
+  .highlighted {
+    color: #F84300; 
+    font-weight: bold; 
+  }
+  .circulo-indicador-calendario {
+    width: 4px; 
+    height: 4px;
+    border-radius: 50%;
+    background-color: #05C3DD;
+    position: absolute;
+    bottom: 2px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+  
+  .ant-picker-cell-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    padding-bottom: 26px; 
+  }
+.darkmode {
+    background-color: #212121 !important;
+    color: #ffffff !important;
+}
+
+.bootstrap-darkmode .modal-content{
+  background-color: #212121 !important;
+  color: #ffffff !important;
+}
+.btn-puesto {
+    cursor:pointer;
+    fill: transparent !important;
+    fill-opacity: 0.8;
+    transition: fill 0.8s ease-in-out;
+  }
+  
+  .btn-puesto:hover {
+    fill: #05C3DD !important;
+    transition: fill 0.3s ease-in-out;
+    fill-opacity: 0.8;
+  }
+  
+  .puesto-seleccionado{
+    fill: #05C3DD !important;
+    fill-opacity: 1 !important;
+  }
+
+  .puesto-ocupado{
+    fill: gray !important;
+    fill-opacity: 0.9 !important;
+  }
+
+  .puesto-ocupado:hover{
+    fill: gray !important;
+    fill-opacity: 1 !important;
+    cursor: not-allowed !important;
+  }

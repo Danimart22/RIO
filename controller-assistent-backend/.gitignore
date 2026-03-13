@@ -1,0 +1,14 @@
+# Dependencias de Node
+node_modules/
+
+# Archivos de log
+*.log
+.env
+# Directorios de compilación
+dist/
+build/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+src/migrate/

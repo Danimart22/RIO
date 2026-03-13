@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.bienvenida-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.bienvenida-background {
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bienvenida-motion {
+  margin-top: 8%;
+  margin-left: 10%;
+}
+
+.bienvenida-greeting {
+  white-space: pre;
+}

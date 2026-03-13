@@ -1,0 +1,73 @@
+.rh-skeleton-container {
+  width: 100%;
+}
+
+.rh-skeleton-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.rh-title {
+  font-weight: bold;
+}
+
+.rh-search-bar {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rh-search-input {
+  flex: 1;
+  max-width: 500px;
+}
+
+.rh-match-counter {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.rh-toolbar {
+  margin-bottom: 16px;
+}
+
+.rh-btn-create {
+  margin: 1%;
+  background-color: #F45000;
+  color: white;
+  padding: 10000px;
+}
+
+.rh-btn {
+  margin: 1%;
+  padding: 10000px
+}
+
+.rh-datagrid-container {
+  height: 450px;
+  width: 100%;
+}
+
+.rh-btn-edit {
+  margin-right: 10px;
+}
+
+.rh-days-unassigned {
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.rh-days-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #1976d2;
+  cursor: help;
+  letter-spacing: 0.5px;
+}
+
+.rh-chip {
+  margin: 2px;
+}

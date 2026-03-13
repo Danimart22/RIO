@@ -1,0 +1,33 @@
+.perfil-skeleton-container {
+  display: flex;
+  gap: 400px;
+}
+
+.perfil-skeleton-column {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.perfil-title {
+  margin-bottom: 3%;
+}
+
+.perfil-actions {
+  margin-top: 3%;
+}
+
+.perfil-btn-save {
+  margin-top: 3%;
+  margin-right: 5px;
+}
+
+.perfil-btn-cancel {
+  margin-top: 3%;
+}
+
+.perfil-btn-edit {
+  margin-top: 3%;
+  background-color: #05C3DD;
+  color: white;
+}
