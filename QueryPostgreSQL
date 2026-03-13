@@ -164,3 +164,55 @@ dias_id SERIAL references dias(id)
 
 insert into dias(id, nombre) values
 ('1', 'Lunes'), ('2', 'Martes'), ('3', 'Miercoles'), ('4', 'Jueves'), ('5', 'Viernes'), ('6', 'Sabado'), ('7', 'Domingo');
+
+INSERT INTO users (
+  username,
+  tipo_documento,
+  documento,
+  nombres,
+  apellidos,
+  correo,
+  sangre,
+  telefono,
+  cargo,
+  area,
+  subarea,
+  empresa,
+  direccion,
+  eps,
+  arl,
+  brigadista,
+  password,
+  estado,
+  asiento,
+  random_numbers,
+  created_at,
+  updated_at
+)
+VALUES (
+  'admin',
+  'CC',
+  1000000000,
+  'Administrador',
+  'Sistema',
+  'admin@moblize-fs.com',
+  'O+',
+  3000000000,
+  'Administrador',
+  'TI',
+  'Proyectos',
+  'Empresa 1',
+  'Oficina Principal',
+  'Sura',
+  'Sura',
+  'No',
+  '$2y$10$9So2Vsnf2gPRBcnpBAdcTeYK3KArhf0WcF0h7WxawpOlQqQO7Gl/2', 
+  'activo',
+  1,
+  ARRAY[111111,222222,333333],
+  NOW(),
+  NOW()
+);
+insert into roles (nombre) values ('empleado'), ('admin'), ('porteria'), ('RRHH'), ('director'), ('gerente'), ('TI');
+
+insert into user_roles (user_id, role_id) values ('8c6e649b-c56b-4160-adf7-098ee00c7e65', '086d2c81-8696-4225-9c83-f05caebfa40e');
