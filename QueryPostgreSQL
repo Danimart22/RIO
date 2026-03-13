@@ -3,87 +3,50 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
  
 
 CREATE TABLE roles (
-
   id UUID PRIMARY key default gen_random_uuid(),
-
   nombre TEXT UNIQUE NOT NULL
-
 );
 
  
 
 CREATE TABLE users (
-
   id UUID PRIMARY key default gen_random_uuid(),
-
   username TEXT,
-
   tipo_documento TEXT,
-
   documento BIGINT,
-
   nombres TEXT NOT NULL,
-
   apellidos TEXT NOT NULL,
-
   correo TEXT UNIQUE NOT NULL,
-
   sangre TEXT,
-
   telefono BIGINT,
-
   cargo TEXT,
-
   area TEXT,
-
   subarea TEXT,
-
   empresa TEXT,
-
   acudiente TEXT,
-
   tipo_acudiente TEXT,
-
   numero_acudiente TEXT,
-
   direccion TEXT,
-
   eps TEXT,
-
   arl TEXT,
-
   enfermedades JSONB default '[]'::jsonb,
-
   alergias JSONB default '[]'::jsonb,
-
   brigadista TEXT DEFAULT 'No',
-
   password TEXT,
-
   estado TEXT,
-
   asiento INT,
-
   random_numbers BIGINT[],
-
   code_expiration TIMESTAMP,
-
   created_at TIMESTAMP,
-
   updated_at TIMESTAMP
-
 );
 
  
 
 CREATE TABLE user_roles (
-
   user_id UUID REFERENCES users(id),
-
   role_id UUID REFERENCES roles(id),
-
   PRIMARY KEY (user_id, role_id)
-
 );
 
  
@@ -91,193 +54,113 @@ CREATE TABLE user_roles (
  
 
 CREATE TABLE visitantes (
-
   id UUID PRIMARY key default gen_random_uuid(),
-
   tipo_documento TEXT,
-
   documento BIGINT UNIQUE,
-
   nombres TEXT,
-
   apellidos TEXT,
-
   sangre TEXT,
-
   telefono BIGINT,
-
   direccion JSONB default '[]'::jsonb,
-
   eps TEXT,
-
   arl TEXT,
-
   enfermedades JSONB default '[]'::jsonb,
-
   alergias JSONB default '[]'::jsonb,
-
   created_at TIMESTAMP,
-
   updated_at TIMESTAMP
-
 );
 
- 
+CREATE TABLE oficinas (
+  id UUID PRIMARY key default gen_random_uuid(),
+  fecha DATE UNIQUE,
+  asientos_disponibles INT
+);
+ CREATE TABLE reemplazos (
+  id UUID PRIMARY KEY default gen_random_uuid(),
+  tipo_documento TEXT,
+  documento BIGINT,
+  nombres TEXT,
+  apellidos TEXT,
+  sangre TEXT,
+  telefono BIGINT,
+  cargo TEXT,
+  acudiente TEXT,
+  tipo_acudiente TEXT,
+  numero_acudiente TEXT,
+  direccion TEXT,
+  eps TEXT,
+  arl TEXT,
+  estado TEXT,
+  enfermedades JSONB,
+  alergias JSONB,
+  created_at TIMESTAMP,
+  updated_at TIMESTAMP
+);
+
 
 CREATE TABLE reservas (
-
   id UUID PRIMARY key default gen_random_uuid(),
-
   oficina_id UUID REFERENCES oficinas(id),
-
   user_id UUID REFERENCES users(id),
-
   visitante_id UUID REFERENCES visitantes(id),
-
   reemplazo_id UUID REFERENCES reemplazos(id),
-
   tipo TEXT,
-
   fecha_reserva DATE,
-
   hora_llegada TEXT[],
-
   hora_salida TEXT[],
-
   numero_silla INT,
-
   visitante_responsable_mobilize TEXT,
-
   visitante_motivo TEXT,
-
   visitante_acudiente TEXT,
-
   visitante_tipo_acudiente TEXT,
-
   visitante_numero_acudiente TEXT,
-
   estado TEXT,
-
   desde DATE,
-
   hasta DATE,
-
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-
 );
 
  
 
-CREATE TABLE reemplazos (
-
-  id UUID PRIMARY KEY default gen_random_uuid(),
-
-  tipo_documento TEXT,
-
-  documento BIGINT,
-
-  nombres TEXT,
-
-  apellidos TEXT,
-
-  sangre TEXT,
-
-  telefono BIGINT,
-
-  cargo TEXT,
-
-  acudiente TEXT,
-
-  tipo_acudiente TEXT,
-
-  numero_acudiente TEXT,
-
-  direccion TEXT,
-
-  eps TEXT,
-
-  arl TEXT,
-
-  estado TEXT,
-
-  enfermedades JSONB,
-
-  alergias JSONB,
-
-  created_at TIMESTAMP,
-
-  updated_at TIMESTAMP
-
-);
 
  
 
  
 
 CREATE TABLE observaciones (
-
   id UUID PRIMARY key default gen_random_uuid(),
-
   fecha DATE,
-
   asiento_reportado INT,
-
   observaciones TEXT,
-
   objetos JSONB,
-
   estado TEXT,
-
   tipo TEXT,
-
   user_id UUID REFERENCES users(id),
-
   nombre_reportante TEXT
-
 );
 
  
 
 CREATE TABLE reemplazo_usuarios (
-
   reemplazo_id UUID REFERENCES reemplazos(id),
-
   user_id UUID REFERENCES users(id),
-
   desde DATE,
-
   hasta DATE
-
 );
 
  
 
-CREATE TABLE oficinas (
 
-  id UUID PRIMARY key default gen_random_uuid(),
-
-  fecha DATE UNIQUE,
-
-  asientos_disponibles INT
-
-);
 
 create table dias (
-
-id SERIAL primary KEY,
-
+id SERIAL primary key,
 nombre text
-
 );
 
 create table dias_users(
-
 user_id UUID references users(id),
-
 dias_id SERIAL references dias(id)
-
 );
 
 insert into dias(id, nombre) values
-
 ('1', 'Lunes'), ('2', 'Martes'), ('3', 'Miercoles'), ('4', 'Jueves'), ('5', 'Viernes'), ('6', 'Sabado'), ('7', 'Domingo');
