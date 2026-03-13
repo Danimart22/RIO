@@ -166,6 +166,7 @@ insert into dias(id, nombre) values
 ('1', 'Lunes'), ('2', 'Martes'), ('3', 'Miercoles'), ('4', 'Jueves'), ('5', 'Viernes'), ('6', 'Sabado'), ('7', 'Domingo');
 
 INSERT INTO users (
+  id,
   username,
   tipo_documento,
   documento,
@@ -190,6 +191,7 @@ INSERT INTO users (
   updated_at
 )
 VALUES (
+  '8c6e649b-c56b-4160-adf7-098ee00c7e65',
   'admin',
   'CC',
   1000000000,
@@ -213,6 +215,16 @@ VALUES (
   NOW(),
   NOW()
 );
-insert into roles (nombre) values ('empleado'), ('admin'), ('porteria'), ('RRHH'), ('director'), ('gerente'), ('TI');
+
+insert into roles (id, nombre) values ('e2c57c3c-22f2-491d-864e-85808a40bb11','empleado'), ('fd15aa38-1db6-4022-ac22-9009032a87a5','admin'), ('64efa0f8-d6ff-4469-87a6-eb944438d4bf','porteria'), ('0b14a9cd-4392-46b5-8391-7356103383d1','RRHH'), ('fa0e4ee1-3a8e-4b8d-b27d-1f92d1b9a19c','director'), ('dc896e50-96ef-498b-a1eb-c24fbf5e3cbd','gerente'), ('086d2c81-8696-4225-9c83-f05caebfa40e','TI');
+
+insert into user_roles (user_id, role_id) values ('8c6e649b-c56b-4160-adf7-098ee00c7e65', 'e2c57c3c-22f2-491d-864e-85808a40bb11');
+
+insert into user_roles (user_id, role_id) values ('8c6e649b-c56b-4160-adf7-098ee00c7e65', 'fd15aa38-1db6-4022-ac22-9009032a87a5');
+
+insert into user_roles (user_id, role_id) values ('8c6e649b-c56b-4160-adf7-098ee00c7e65', '64efa0f8-d6ff-4469-87a6-eb944438d4bf');
+
+insert into user_roles (user_id, role_id) values ('8c6e649b-c56b-4160-adf7-098ee00c7e65', '0b14a9cd-4392-46b5-8391-7356103383d1');
 
 insert into user_roles (user_id, role_id) values ('8c6e649b-c56b-4160-adf7-098ee00c7e65', '086d2c81-8696-4225-9c83-f05caebfa40e');
+
